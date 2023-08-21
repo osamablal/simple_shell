@@ -13,9 +13,9 @@ void remove_error(char **argv, char *arg)
 
 	for (i = 0; argv[i]; i++)
 		free(argv[i]);
-		free(argv);
-		free(arg);
-		exit(EXIT_FAILURE);
+	free(argv);
+	free(arg);
+	exit(EXIT_FAILURE);
 }
 
 /**
