@@ -42,7 +42,7 @@ void remove_tokens(char **ptr)
  */
 void remove_path(void)
 {
-	if (environ != NULL)
+	if (environ[i] != NULL)
 	{
 		size_t i = 0;
 
