@@ -28,8 +28,3 @@ int our_check(char **args)
 		return (0);
 	return (1);
 }
-
-int our_execute(char *cmd, char **args)
-{
-    return 0;
-}
