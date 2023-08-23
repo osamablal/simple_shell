@@ -94,5 +94,38 @@ char *our_memcpy(char *z, char *v, unsigned int n);
 void *our_realloc(void *, unsigned int, unsigned int);
 void *our_calloc(unsigned int nmb, unsigned int siz);
 
+typedef struct passinfo
+{
+	char *arg;
+	char **argv;
+	char *nam;
+	int **args;
+	unsigned int siz;
+	unsigned int nmb;
+	char *rt;
+	char *st;
+	char *name;
+	char *input;
+	char buffer[BUFFER_SIZE];
+	int buff_pos, buff_size;
+	char *input_str;
+	char current_char;
+	int input_len;
+	char **env;
+    char **environ;
+	int env_changed;
+	int status;
+
+	char **ptr;
+    char *cmd;
+	int cmd_buf_type;
+	int readfd;
+	int histcount;
+} info_t;
+
+#define INFO_INIT \
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+		0, 0, 0}
+
 #endif
 
