@@ -15,6 +15,8 @@ int main(void)
 	signal(SIGQUIT, ourhandle_sigquit);
 	signal(SIGTSTP, ourhandle_sigstp);
 
+if (isatty(STDIN_FILENO))
+	{
 	do {
 		input = ourget_input();
 		if (!input || !*input)
@@ -35,5 +37,8 @@ int main(void)
 	} while (status);
 
 	return (EXIT_SUCCESS);
+} else {
+	execute(input);
+}
 }
 
