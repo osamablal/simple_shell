@@ -95,7 +95,6 @@ void *our_calloc(unsigned int nmb, unsigned int siz);
 #ifndef _INC_SIGNAL
 #define _INC_SIGNAL
 
-#include <crtdefs.h>
 #include <pthread_signal.h>
 
 #ifdef __cplusplus
