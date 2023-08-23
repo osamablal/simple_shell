@@ -24,6 +24,9 @@
 
 /* Running Prompt : pro.c */
 void pro(void);
+int inrctive(char *);
+int isdlim(char, char *);
+int islph(int);
 
 /* Getting Input : ourget_input.c */
 char *ourget_input(void);
