@@ -14,7 +14,7 @@ void our_exit(char **args)
 	{
 		status = our_atoi(args[1]);
 	}
-	remove_tokens(args);
+	free(args);
 	remove_previous_input();
 	exit(status);
 }
