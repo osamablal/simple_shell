@@ -10,32 +10,3 @@ void pro(void)
 	our_puts(PROMPT);
 	fflush(stdout);
 }
-
-/**
- * isdlim - Check character if is delimeter.
- * @chr: the char to check
- * @dlm: the delimeter string
- * Return: 1 if true, 0 if false
- */
-int isdlim(char chr, char *dlm)
-{
-	while (*dlm)
-		if (*dlm++ == chr)
-			return (1);
-	return (0);
-}
-
-/**
- * islph - Checks about any alphabet.
- * @chr: Character.
- * Return: 1 if @chr alphabetic, 0 else.
- */
-
-int islph(int chr)
-{
-	if ((chr >= 'a' && chr <= 'z') || (chr >= 'A' && chr <= 'Z'))
-		return (1);
-	else
-		return (0);
-}
-
