@@ -22,6 +22,8 @@
 #define PROMPT "$ "
 #define PATH_MAX_LENGTH 4096
 
+int hsh(char **);
+
 /* Running Prompt : pro.c */
 void pro(void);
 
