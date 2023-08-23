@@ -19,7 +19,7 @@ void pro(void)
  */
 int inrctive(char *inf)
 {
-	return (isatty(STDIN_FILENO) & inf->ourget_input <= 2);
+	return (isatty(STDIN_FILENO) & inf <= 2);
 }
 
 /**
