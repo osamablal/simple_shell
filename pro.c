@@ -12,17 +12,6 @@ void pro(void)
 }
 
 /**
- * inrctive - Returns 1 if it's interactive mode.
- * @inf: Structure placing.
- *
- * Return: 1 if it's interactive mode, 0 else.
- */
-int inrctive(char *inf)
-{
-	return (isatty(STDIN_FILENO) & inf <= 2);
-}
-
-/**
  * isdlim - Check character if is delimeter.
  * @chr: the char to check
  * @dlm: the delimeter string
