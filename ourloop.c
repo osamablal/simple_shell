@@ -18,7 +18,7 @@ int hsh(info_t *info, char **vc)
 		if (intrctv(info))
 			_puts("$ ");
 		our_eputchar(BUF_FLUSH);
-		r = ourget_input(info);
+		r = our_getinput(info);
 		if (r != -1)
 		{
 			our_setinf(info, vc);
@@ -36,9 +36,9 @@ int hsh(info_t *info, char **vc)
 		exit(info->status);
 	if (builtn_rt == -2)
 	{
-		if (info->err_num == -1)
+		if (info->err_nme == -1)
 			exit(info->status);
-		exit(info->err_num);
+		exit(info->err_nme);
 	}
 	return (builtn_rt);
 }
