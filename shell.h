@@ -73,7 +73,7 @@ typedef struct passinfo
 	char *path;
 	int argc;
 	unsigned int line_count;
-	int err_nme;
+	int err_num;
 	int linecount_flag;
 	char *fname;
 	list_t *env;
@@ -181,6 +181,7 @@ void ourcheck_chain(info_t *, char *, size_t *, size_t, size_t);
 int ourreplace_alias(info_t *);
 int ourreplace_vars(info_t *);
 int ourreplace_string(char **, char *);
+size_t ourprint_liststg(const list_t *);
 
 #endif
 

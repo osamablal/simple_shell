@@ -75,12 +75,12 @@ list_t *ouradd_nodeend(list_t **hd, const char *stg, int num)
 }
 
 /**
- * ourprint_list - Print string element of list_t list.
+ * ourprint_liststg - Print string element of list_t list.
  * @g: Pointer to the first node.
  *
  * Return: List Siz.
  */
-size_t ourprint_list(const list_t *g)
+size_t ourprint_liststg(const list_t *g)
 {
 	size_t i = 0;
 
