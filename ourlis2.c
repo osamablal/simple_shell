@@ -67,7 +67,7 @@ size_t ourprint_list(const list_t *hd)
 
 	while (hd)
 	{
-		_puts(convert_number(hd->nm, 10, 0));
+		_puts(convert_number(hd->num, 10, 0));
 		_putchar(':');
 		_putchar(' ');
 		_puts(hd->stg ? hd->stg : "(nil)");
