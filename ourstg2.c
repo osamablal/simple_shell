@@ -81,6 +81,6 @@ int _putchar(char chr)
 		i = 0;
 	}
 	if (chr != BUF_FLUSH)
-		buf[i++] = chr;
+		buff[i++] = chr;
 	return (1);
 }

@@ -31,8 +31,8 @@ char **ourstrtow(char *stg, char *dlm)
 			i++;
 		f = 0;
 		while (!isdlm(stg[i + f], dlm) && stg[i + f])
-			k++;
-		h[j] = malloc((f + 1) * sizeof(char));
+			f++;
+		h[e] = malloc((f + 1) * sizeof(char));
 		if (!h[e])
 		{
 			for (f = 0; f < e; f++)

@@ -52,7 +52,7 @@ char *our_strncat(char *dest, char *src, int n)
 		i++;
 		l++;
 	}
-	if (j < n)
+	if (l < n)
 		dest[i] = '\0';
 	return (m);
 }
