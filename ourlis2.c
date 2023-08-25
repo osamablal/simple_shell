@@ -27,7 +27,7 @@ size_t ourlist_len(const list_t *g)
 char **ourlist_string(list_t *hd)
 {
 	list_t *nod = hd;
-	size_t i = list_len(hd), k;
+	size_t i = ourlist_len(hd), k;
 	char **stgs;
 	char *stg;
 
@@ -67,7 +67,7 @@ size_t ourprint_list(const list_t *hd)
 
 	while (hd)
 	{
-		_puts(convert_number(hd->num, 10, 0));
+		_puts(ourconvert_num(hd->num, 10, 0));
 		_putchar(':');
 		_putchar(' ');
 		_puts(hd->stg ? hd->stg : "(nil)");
@@ -92,7 +92,7 @@ list_t *ournode_start(list_t *nod, char *prefix, char chr)
 
 	while (nod)
 	{
-		x = starts_with(nod->stg, prefix);
+		x = our_starts(nod->stg, prefix);
 		if (x && ((chr == -1) || (*x == chr)))
 			return (nod);
 		nod = nod->next;
