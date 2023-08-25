@@ -133,7 +133,7 @@ char **ourstrtow2(char *, char);
 char *our_memset(char *, char, unsigned int);
 void our_free(char **);
 void *our_realloc(void *, unsigned int, unsigned int);
-int our_pfree(void **);
+int our_bfree(void **);
 int intrctv(info_t *);
 int isdlm(char, char *);
 int islph(int);
