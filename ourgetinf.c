@@ -51,7 +51,7 @@ void our_setinf(info_t *info, char **arv)
  */
 void our_freeinf(info_t *info, int alll)
 {
-	ffree(info->argv);
+	our_free(info->argv);
 	info->argv = NULL;
 	info->path = NULL;
 	if (alll)
@@ -64,9 +64,9 @@ void our_freeinf(info_t *info, int alll)
 			ourfree_list(&(info->history));
 		if (info->alias)
 			ourfree_list(&(info->alias));
-		ffree(info->environ);
+		our_free(info->environ);
 			info->environ = NULL;
-		bfree((void **)info->cmd_buf);
+		our_bfree((void **)info->cmd_buf);
 		if (info->readfd > 2)
 			close(info->readfd);
 		_putchar(BUF_FLUSH);
