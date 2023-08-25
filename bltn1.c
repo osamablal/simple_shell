@@ -20,10 +20,10 @@ int our_exit(info_t *info)
 			our_eputchar('\n');
 			return (1);
 		}
-		info->err_nme = our_err(info->argv[1]);
+		info->err_num = our_err(info->argv[1]);
 		return (-2);
 	}
-	info->err_nme = -1;
+	info->err_num = -1;
 	return (-2);
 }
 
