@@ -33,7 +33,7 @@ int _unsetenv(info_t *info, char *var)
 
 	while (nod)
 	{
-		r = ournode_start(nod->stg, var);
+		r = our_starts(nod->stg, var);
 		if (r && *r == '=')
 		{
 			info->env_changed = ourdelete_node(&(info->env), i);
@@ -72,7 +72,7 @@ int _setenv(info_t *info, char *var, char *value)
 	nod = info->env;
 	while (nod)
 	{
-		r = ournode_start(nod->stg, var);
+		r = our_starts(nod->stg, var);
 		if (r && *r == '=')
 		{
 			free(nod->stg);
