@@ -45,6 +45,23 @@ void our_setinf(info_t *info, char **arv)
 }
 
 /**
+ * our_pfree - Free pointr.
+ * @pntr: Pointer Adress.
+ *
+ * Return: 1 , else 0.
+ */
+int our_pfree(void **pntr)
+{
+	if (pntr && *pntr)
+	{
+		free(*pntr);
+		*pntr = NULL;
+		return (1);
+	}
+	return (0);
+}
+
+/**
  * our_freeinf - Free info_t.
  * @info: Structuree address.
  * @alll: True if freeing all fields

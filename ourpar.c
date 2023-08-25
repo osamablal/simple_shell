@@ -85,19 +85,3 @@ char *ourfind_path(info_t *info, char *pathstg, char *cmd)
 	return (NULL);
 }
 
-/**
- * our_pfree - Free pointr.
- * @pntr: Pointer Adress.
- *
- * Return: 1 , else 0.
- */
-int our_pfree(void **pntr)
-{
-	if (pntr && *pntr)
-	{
-		free(*pntr);
-		*pntr = NULL;
-		return (1);
-	}
-	return (0);
-}
