@@ -17,12 +17,12 @@ char **get_environ(info_t *info)
 }
 
 /**
- * our_unsetenv - Delete env variable.
+ * _unsetenv - Delete env variable.
  * @info: Structure.
  *  Return: 1, 0 otherwise
  * @var: String env var.
  */
-int our_unsetenv(info_t *info, char *var)
+int _unsetenv(info_t *info, char *var)
 {
 	list_t *nod = info->env;
 	size_t i = 0;
@@ -48,13 +48,13 @@ int our_unsetenv(info_t *info, char *var)
 }
 
 /**
- * our_setenv - Initialise new env variable.
+ * _setenv - Initialise new env variable.
  * @info: Structure.
  * @var: String env var.
  * @value: Var value.
  *  Return: 0.
  */
-int our_setenv(info_t *info, char *var, char *value)
+int _setenv(info_t *info, char *var, char *value)
 {
 	char *buff = NULL;
 	list_t *nod;
