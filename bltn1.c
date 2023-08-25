@@ -15,7 +15,7 @@ int our_exit(info_t *info)
 		if (excheck == -1)
 		{
 			info->status = 2;
-			print_error(info, "Illegal num: ");
+			our_printerr(info, "Illegal num: ");
 			our_eputs(info->argv[1]);
 			our_eputchar('\n');
 			return (1);
@@ -65,7 +65,7 @@ int our_cd(info_t *info)
 		chdir_ret = chdir(info->argv[1]);
 	if (chdir_ret == -1)
 	{
-		print_error(info, "Can Not cd ");
+		our_printerr(info, "Can Not cd ");
 		our_eputs(info->argv[1]), our_eputchar('\n');
 	}
 	else
