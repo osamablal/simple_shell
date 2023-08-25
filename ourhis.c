@@ -17,7 +17,7 @@ char *ourget_hisfile(info_t *info)
 	buff = malloc(sizeof(char) * (our_strlen(dir) + our_strlen(HIST_FILE) + 2));
 	if (!buff)
 		return (NULL);
-	buf[0] = 0;
+	buff[0] = 0;
 	our_strcpy(buff, dir);
 	our_strcat(buff, "/");
 	our_strcat(buff, HIST_FILE);
@@ -45,7 +45,7 @@ int ourwrithis(info_t *info)
 		return (-1);
 	for (nod = info->history; nod; nod = nod->next)
 	{
-		_putsfd(nod->str, flr);
+		_putsfd(nod->stg, flr);
 		_putfd('\n', flr);
 	}
 	_putfd(BUF_FLUSH, flr);

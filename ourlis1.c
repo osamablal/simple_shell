@@ -4,11 +4,11 @@
  * ouradd_node - adds a node to the start of the list
  * @hd: address of pointer to head node
  * @stg: str field of node
- * @nm: node index used by history
+ * @num: node index used by history
  *
  * Return: size of list
  */
-list_t *ouradd_node(list_t **hd, const char *stg, int nm)
+list_t *ouradd_node(list_t **hd, const char *stg, int num)
 {
 	list_t *new_hd;
 
@@ -18,7 +18,7 @@ list_t *ouradd_node(list_t **hd, const char *stg, int nm)
 	if (!new_hd)
 		return (NULL);
 	our_memset((void *)new_hd, 0, sizeof(list_t));
-	new_hd->nm = nm;
+	new_hd->num = num;
 	if (stg)
 	{
 		new_hd->stg = our_strdup(stg);
@@ -37,11 +37,11 @@ list_t *ouradd_node(list_t **hd, const char *stg, int nm)
  * ouradd_nodeend - adds a node to the end of the list
  * @hd: address of pointer to head node
  * @stg: str field of node
- * @nm: node index used by history
+ * @num: node index used by history
  *
  * Return: size of list
  */
-list_t *ouradd_nodeend(list_t **hd, const char *stg, int nm)
+list_t *ouradd_nodeend(list_t **hd, const char *stg, int num)
 {
 	list_t *new_nod, *nod;
 
@@ -53,7 +53,7 @@ list_t *ouradd_nodeend(list_t **hd, const char *stg, int nm)
 	if (!new_nod)
 		return (NULL);
 	our_memset((void *)new_nod, 0, sizeof(list_t));
-	new_nod->nm = nm;
+	new_nod->num = num;
 	if (stg)
 	{
 		new_nod->stg = our_strdup(stg);
