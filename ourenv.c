@@ -45,7 +45,7 @@ int our_setenv(info_t *info)
 		our_eputs("Incorrect num of arguements\n");
 		return (1);
 	}
-	if (our_setenv(info, info->argv[1], info->argv[2]))
+	if (_setenv(info, info->argv[1], info->argv[2]))
 		return (0);
 	return (1);
 }
@@ -65,7 +65,7 @@ int our_unsetenv(info_t *info)
 		return (1);
 	}
 	for (i = 1; i <= info->argc; i++)
-		our_unsetenv(info, info->argv[i]);
+		_unsetenv(info, info->argv[i]);
 
 	return (0);
 }
