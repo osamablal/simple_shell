@@ -45,12 +45,12 @@ void our_setinf(info_t *info, char **arv)
 }
 
 /**
- * our_pfree - Free pointr.
+ * our_bfree - Free pointr.
  * @pntr: Pointer Adress.
  *
  * Return: 1 , else 0.
  */
-int our_pfree(void **pntr)
+int our_bfree(void **pntr)
 {
 	if (pntr && *pntr)
 	{
