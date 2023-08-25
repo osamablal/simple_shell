@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * input_buf - buffer commands.
+ * input_buff - buffer commands.
  * @info: parameter structuree.
  * @buff: Buffer addres.
  * @len: Addres of var.
