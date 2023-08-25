@@ -137,7 +137,7 @@ void our_forkcmd(info_t *info)
 	}
 	if (child_pid == 0)
 	{
-		if (execve(info->path, info->argv, our_env(info)) == -1)
+		if (execve(info->path, info->argv, get_environ(info)) == -1)
 		{
 			our_freeinf(info, 1);
 			if (errno == EACCES)
