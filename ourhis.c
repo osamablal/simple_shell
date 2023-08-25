@@ -45,10 +45,10 @@ int ourwrithis(info_t *info)
 		return (-1);
 	for (nod = info->history; nod; nod = nod->next)
 	{
-		_putsfd(nod->stg, flr);
-		_putfd('\n', flr);
+		our_putsfd(nod->stg, flr);
+		our_putfd('\n', flr);
 	}
-	_putfd(BUF_FLUSH, flr);
+	our_putfd(BUF_FLUSH, flr);
 	close(flr);
 	return (1);
 }
